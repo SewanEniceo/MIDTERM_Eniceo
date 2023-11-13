@@ -1,0 +1,39 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+    
+</head>
+<body>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="login()">Login</button>
+    <button type="register" onclick="goto()">Register</button>
+</form>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        
+        if (username === 'user' && password === 'password') {
+            
+            alert('Congratulations You have Successfully Logged In!')
+        } else {
+            alert('Wrong Email or Password. Please Check Again');
+        }
+    }
+    function goto() {
+        window.location.href = 'registration.html';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+<form id="loginForm">
+    <label for="username">Firstname:</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="username">Lastname:</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="register()">Register</button>
+    <button type="button" onclick="goto()">Login</button>
+</form>
+
+<script>
+    function register() {
+        var firstname = document.getElementById('firstname').value;
+        var lastname = document.getElementById('lastname').value;
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (firstname == 'fname'&& lastname === 'lname' && username === 'user' && password === 'password') {
+            alert('Congratulations You have Successfully Registered!')
+        } else {
+            alert('Please Try Again.');
+        }
+    }
+
+    function goto() {
+        window.location.href = 'login.html';
+    }
+</script>
+
+</body>
+</html>
